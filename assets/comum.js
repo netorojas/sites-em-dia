@@ -141,7 +141,28 @@ const SED = (() => {
     const safe = document.getElementById("selo-safe");
     if (safe) safe.href = `https://transparencyreport.google.com/safe-browsing/search?url=${encodeURIComponent(location.host || "netorojas.github.io")}&hl=pt_BR`;
     document.querySelectorAll("form[data-teste]").forEach(f => ligarTeste(f, document.querySelector(f.dataset.teste)));
+    avisoPrivacidade();
   });
+
+  // Aviso de privacidade. Hoje o site não usa cookies de rastreio, então o aviso só informa.
+  // Se um dia entrar Google Analytics ou pixel de anúncio, ele precisa virar um pedido de
+  // consentimento (Aceitar / Recusar) ANTES de carregar essas ferramentas.
+  function avisoPrivacidade() {
+    let visto = false;
+    try { visto = localStorage.getItem("sed-aviso-privacidade") === "1"; } catch { /* navegador sem armazenamento */ }
+    if (visto) return;
+    const aviso = document.createElement("div");
+    aviso.className = "aviso-cookies";
+    aviso.setAttribute("role", "region");
+    aviso.setAttribute("aria-label", "Aviso de privacidade");
+    aviso.innerHTML = `<p><b>Sem cookies de rastreio.</b> Este site não usa Google Analytics nem pixels de anúncio. Só guardamos que você leu este aviso. <a href="privacidade.html">Saiba mais</a></p>
+      <button class="botao" type="button">Entendi</button>`;
+    aviso.querySelector("button").addEventListener("click", () => {
+      try { localStorage.setItem("sed-aviso-privacidade", "1"); } catch { /* segue sem lembrar */ }
+      aviso.remove();
+    });
+    document.body.append(aviso);
+  }
 
   return { faixa, zap, telefone, normalizarHost, testarGoogle, dns, esc, anel };
 })();
