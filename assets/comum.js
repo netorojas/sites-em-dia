@@ -22,7 +22,7 @@ const SED = (() => {
   const CATEGORIAS = [["performance", "Velocidade"], ["accessibility", "Acessibilidade"], ["best-practices", "Boas práticas"], ["seo", "SEO"]];
 
   async function testarGoogle(host, estrategia = "mobile") {
-    const p = new URLSearchParams({ url: `https://${host}`, strategy: estrategia, locale: "pt_BR" });
+    const p = new URLSearchParams({ url: `https://${host}`, strategy: estrategia, locale: "pt-BR" });
     CATEGORIAS.forEach(([c]) => p.append("category", c.toUpperCase().replace("-", "_")));
     if (cfg().pagespeedKey) p.set("key", cfg().pagespeedKey);
     const controle = new AbortController();
