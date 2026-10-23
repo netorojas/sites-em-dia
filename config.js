@@ -9,7 +9,7 @@ window.SITE = {
 
   // Chave da API do Google PageSpeed Insights (grátis). Sem chave, o teste real
   // usa a cota pública do Google, que costuma acabar no meio do dia.
-  pagespeedKey: "",
+  pagespeedKey: "AIzaSyD7g6fxKbOedfXiWdsde4L35pH1UrSd4aA",
 
   // Links de pagamento (Asaas ou Mercado Pago). Enquanto estiverem vazios,
   // o botão "Assinar" abre o WhatsApp com o plano escolhido.
