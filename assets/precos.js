@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     botao.rel = "noopener";
   });
   document.getElementById("aviso-pagamento").textContent = algumSemLink
-    ? "Ao clicar em Assinar, você fala com a gente no WhatsApp e recebe o link de pagamento por Pix ou cartão."
+    ? "Ao clicar em Assinar, você fala com a gente no WhatsApp e recebe o link de pagamento por Pix, boleto ou cartão de crédito."
     : "Ao clicar em Assinar, você vai para o ambiente seguro de pagamento.";
 });
