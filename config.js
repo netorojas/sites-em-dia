@@ -11,11 +11,14 @@ window.SITE = {
   // usa a cota pública do Google, que costuma acabar no meio do dia.
   pagespeedKey: "AIzaSyD7g6fxKbOedfXiWdsde4L35pH1UrSd4aA",
 
-  // Links de pagamento (Asaas ou Mercado Pago). Enquanto estiverem vazios,
-  // o botão "Assinar" abre o WhatsApp com o plano escolhido.
+  // Links de pagamento do Asaas, um por plano e período. Enquanto um link estiver
+  // vazio, o botão daquele plano abre o WhatsApp com o plano e o período escolhidos.
+  //   mensal:    link de ASSINATURA mensal (renova sozinha)
+  //   semestral: link de cobrança PARCELADA (pagamento único, até 6x no cartão)
+  //   anual:     link de cobrança PARCELADA (pagamento único, até 12x no cartão)
   pagamento: {
-    inicial: "",
-    agencia: "",
-    carteira: "",
+    inicial:  { mensal: "", semestral: "", anual: "" },
+    agencia:  { mensal: "", semestral: "", anual: "" },
+    carteira: { mensal: "", semestral: "", anual: "" },
   },
 };

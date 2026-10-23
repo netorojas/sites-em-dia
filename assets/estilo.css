@@ -352,3 +352,19 @@ input[type=range] { width: 100%; accent-color: var(--primaria); }
 .aviso-cookies b { color: var(--texto); }
 .aviso-cookies .botao { padding: 9px 16px; font-size: 0.9rem; flex: none; }
 @media (max-width: 520px) { .aviso-cookies { flex-direction: column; align-items: stretch; } }
+
+/* ---------- seletor de período ---------- */
+.periodos { display: flex; justify-content: center; gap: 4px; margin: 0 auto 36px; padding: 5px; width: fit-content; max-width: 100%;
+  background: var(--painel); border: 1px solid var(--borda-forte); border-radius: 999px; flex-wrap: wrap; }
+.periodos button { font: 600 0.95rem var(--fonte); color: var(--texto-suave); background: none; border: 0; border-radius: 999px; padding: 10px 18px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; }
+.periodos button[aria-checked=true] { background: var(--primaria); color: #fff; }
+.periodos .desconto { font-family: var(--mono); font-size: 0.72rem; padding: 2px 7px; border-radius: 999px; background: rgba(61, 220, 132, 0.15); color: var(--bom); }
+.periodos button[aria-checked=true] .desconto { background: rgba(255, 255, 255, 0.2); color: #fff; }
+.preco-bloco { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.riscado { font-family: var(--mono); font-size: 0.95rem; color: var(--texto-suave); text-decoration: line-through; }
+.condicao { font-size: 0.9rem; color: var(--texto); line-height: 1.5; min-height: 3em; }
+.condicao b { font-family: var(--mono); }
+.economia { color: var(--bom); font-weight: 600; }
+.plano { grid-template-rows: auto auto auto auto auto 1fr auto; }
+@media (max-width: 520px) { .periodos { width: 100%; } .periodos button { flex: 1; justify-content: center; padding: 10px 8px; } .periodos .desconto { display: none; } }

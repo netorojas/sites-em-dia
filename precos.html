@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Preços · Sites em Dia</title>
-<meta name="description" content="Planos de laudos de sites com a marca da sua agência a partir de R$ 297 por mês. Pix, boleto ou cartão, sem fidelidade.">
+<meta name="description" content="Planos de laudos de sites com a marca da sua agência: mensal, semestral com 10% de desconto ou anual com 2 meses grátis. Pix, boleto ou cartão em até 12x.">
 <meta property="og:title" content="Preços · Sites em Dia">
-<meta property="og:description" content="Planos de laudos de sites com a marca da sua agência a partir de R$ 297 por mês. Pix, boleto ou cartão, sem fidelidade.">
+<meta property="og:description" content="Planos de laudos de sites com a marca da sua agência: mensal, semestral com 10% de desconto ou anual com 2 meses grátis. Pix, boleto ou cartão em até 12x.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#07090f">
 <link rel="icon" href="assets/icone.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="assets/estilo.css?v=be999196">
-<script src="config.js?v=148ae42a" defer></script>
+<link rel="stylesheet" href="assets/estilo.css?v=5a495f8e">
+<script src="config.js?v=652952e8" defer></script>
 <script src="assets/comum.js?v=36fad224" defer></script>
-<script src="assets/precos.js?v=16fce6ce" defer></script>
+<script src="assets/precos.js?v=10bcf2d2" defer></script>
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -34,7 +34,7 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/
 <header class="gutter grade-fundo">
   <div class="miolo" style="padding-block:72px 32px">
     <div class="cabeca centro" style="margin-bottom:0">
-      <span class="pilula"><i></i>Sem fidelidade · cancele quando quiser</span>
+      <span class="pilula"><i></i>Mensal, semestral ou anual · até 12x no cartão</span>
       <h1>Planos simples. Uma correção vendida já paga o mês.</h1>
       <p class="lead">Todos os planos incluem laudo, proposta e mensagem de WhatsApp com a marca da sua agência.</p>
     </div>
@@ -43,30 +43,35 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/
 
 <section class="gutter compacta" id="planos">
   <div class="miolo">
+    <div class="periodos" role="radiogroup" aria-label="Período de pagamento">
+      <button type="button" role="radio" data-periodo="mensal" aria-checked="false">Mensal</button>
+      <button type="button" role="radio" data-periodo="semestral" aria-checked="false">Semestral <span class="desconto">−10%</span></button>
+      <button type="button" role="radio" data-periodo="anual" aria-checked="true">Anual <span class="desconto">2 meses grátis</span></button>
+    </div>
     <div class="planos">
-      <div class="painel plano">
+      <div class="painel plano" data-card="inicial">
         <h3>Inicial</h3>
         <p class="suave">Para quem está começando a oferecer laudos.</p>
-        <div class="preco">R$ 297<small> /mês</small></div>
-        <span class="suave" style="font-size:.88rem">≈ R$ 14,85 por laudo</span>
+        <div class="preco-bloco"><div class="preco" data-preco></div><span class="riscado" data-riscado></span></div>
+        <span class="condicao" data-condicao></span>
         <ul><li>20 laudos por mês</li><li>Laudo e proposta com a sua marca</li><li>Mensagem de WhatsApp pronta</li><li>Entrega em até 1 dia útil</li><li class="nao">Laudo em lote com planilha</li><li class="nao">Laudo mensal da carteira</li></ul>
-        <a class="botao contorno" data-plano="inicial" href="#">Assinar o Inicial</a>
+        <a class="botao contorno" data-plano="inicial" href="#"></a>
       </div>
-      <div class="painel plano borda-gradiente destaque">
+      <div class="painel plano borda-gradiente destaque" data-card="agencia">
         <h3 style="display:flex;justify-content:space-between;align-items:center;gap:8px">Agência <span class="etiqueta">Mais indicado</span></h3>
         <p class="suave">Para agências com carteira ativa.</p>
-        <div class="preco">R$ 497<small> /mês</small></div>
-        <span class="suave" style="font-size:.88rem">≈ R$ 8,28 por laudo</span>
+        <div class="preco-bloco"><div class="preco" data-preco></div><span class="riscado" data-riscado></span></div>
+        <span class="condicao" data-condicao></span>
         <ul><li>60 laudos por mês</li><li>Tudo do Inicial</li><li>Sua tabela de preços na proposta</li><li>Laudo em lote, com planilha de notas</li><li>Entrega no mesmo dia</li><li class="nao">Laudo mensal da carteira</li></ul>
-        <a class="botao" data-plano="agencia" href="#">Assinar o Agência</a>
+        <a class="botao" data-plano="agencia" href="#"></a>
       </div>
-      <div class="painel plano">
+      <div class="painel plano" data-card="carteira">
         <h3>Carteira</h3>
         <p class="suave">Para agências que querem mostrar resultado todo mês.</p>
-        <div class="preco">R$ 997<small> /mês</small></div>
-        <span class="suave" style="font-size:.88rem">≈ R$ 6,65 por laudo</span>
+        <div class="preco-bloco"><div class="preco" data-preco></div><span class="riscado" data-riscado></span></div>
+        <span class="condicao" data-condicao></span>
         <ul><li>150 laudos por mês</li><li>Tudo do Agência</li><li>Laudo mensal dos seus clientes, com a evolução da nota</li><li>Atendimento prioritário no WhatsApp</li><li>Entrega no mesmo dia</li></ul>
-        <a class="botao contorno" data-plano="carteira" href="#">Assinar o Carteira</a>
+        <a class="botao contorno" data-plano="carteira" href="#"></a>
       </div>
     </div>
     <p class="suave" id="aviso-pagamento" style="text-align:center;margin-top:20px;font-size:.92rem"></p>
@@ -102,7 +107,9 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/
   <div class="miolo" style="max-width:820px">
     <div class="cabeca"><p class="rotulo">Perguntas sobre pagamento</p><h2>Antes de assinar.</h2></div>
     <details><summary>Quais formas de pagamento vocês aceitam?</summary><p>Pix, boleto ou cartão de crédito. No cartão, a assinatura renova sozinha todo mês. No Pix e no boleto, você recebe a cobrança de cada mês por e-mail, com o QR Code do Pix. Cartão de débito não é aceito em assinaturas; nesse caso, use o Pix.</p></details>
-    <details><summary>Tem fidelidade ou multa?</summary><p>Não. Você cancela quando quiser, com 30 dias de aviso, e não paga mais nada depois disso.</p></details>
+    <details><summary>Qual a diferença entre mensal, semestral e anual?</summary><p>No mensal, a assinatura renova sozinha todo mês e você cancela quando quiser. No semestral e no anual, você paga o período de uma vez (à vista no Pix ou boleto, ou parcelado no cartão: até 6x no semestral e até 12x no anual) e economiza 10% no semestral ou o equivalente a 2 meses no anual. Os laudos continuam com limite mensal.</p></details>
+    <details><summary>O semestral e o anual renovam sozinhos?</summary><p>Não. Avisamos 30 dias antes do fim do período, e você escolhe se quer renovar e por quanto tempo.</p></details>
+    <details><summary>Tem fidelidade ou multa?</summary><p>Não há multa. No mensal, você cancela quando quiser, com 30 dias de aviso. No semestral e no anual, o período já está pago e não renova sozinho.</p></details>
     <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias depois da primeira cobrança para desistir e receber o valor de volta, sem precisar explicar o motivo.</p></details>
     <details><summary>Laudos que eu não usar passam para o mês seguinte?</summary><p>Não. O limite de laudos é por mês. Se você precisar de mais, é só mudar de plano.</p></details>
     <details><summary>Emitem nota fiscal?</summary><p>Fale com a gente pelo WhatsApp antes de assinar, se você precisar de nota fiscal.</p></details>
