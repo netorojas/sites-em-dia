@@ -17,8 +17,20 @@ window.SITE = {
   //   semestral: link de cobrança PARCELADA (pagamento único, até 6x no cartão)
   //   anual:     link de cobrança PARCELADA (pagamento único, até 12x no cartão)
   pagamento: {
-    inicial:  { mensal: "", semestral: "", anual: "" },
-    agencia:  { mensal: "", semestral: "", anual: "" },
-    carteira: { mensal: "", semestral: "", anual: "" },
+    inicial: {
+      mensal: "https://www.asaas.com/c/cj94cnqxtxqt0zhf",
+      semestral: "https://www.asaas.com/c/bqmqm5t11yifqfen",
+      anual: "https://www.asaas.com/c/k7zjq9aadttmywj2",
+    },
+    agencia: {
+      mensal: "https://www.asaas.com/c/pit8brwn9oc8dudh",
+      semestral: "https://www.asaas.com/c/mop9q8u5agr764ik",
+      anual: "https://www.asaas.com/c/6jv4nv941zjh7m9p",
+    },
+    carteira: {
+      mensal: "https://www.asaas.com/c/l2xzjsvjv3kyvlg9",
+      semestral: "https://www.asaas.com/c/g8pc7ai8uv8sz1eq",
+      anual: "https://www.asaas.com/c/mdve2mptefbi5srb",
+    },
   },
 };
