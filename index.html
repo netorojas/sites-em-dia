@@ -1,306 +1,79 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head>
-<body>
-<title>Sites em Dia para Agências</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Laudos de sites com a marca da sua agência: nota do Google, segurança, LGPD, SEO e WhatsApp. Com proposta e mensagem prontas para vender a correção.">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sites em Dia · Laudos de sites com a marca da sua agência</title>
+<meta name="description" content="Teste grátis a nota do Google de qualquer site. Laudos completos de velocidade, segurança, LGPD e SEO com a marca da sua agência, com proposta e mensagem prontas.">
+<meta property="og:title" content="Sites em Dia · Laudos de sites com a marca da sua agência">
+<meta property="og:description" content="Teste grátis a nota do Google de qualquer site. Laudos completos de velocidade, segurança, LGPD e SEO com a marca da sua agência, com proposta e mensagem prontas.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#07090f">
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<style>
-/* Layout: escuro e técnico, o produto em ação é a imagem principal (ver DESIGN.md). Página de aparência única, escura, por escolha. */
-:root {
-  --fundo: #07090f;
-  --painel: #0e1320;
-  --painel-2: #151b2c;
-  --borda: #232b40;
-  --texto: #eef2fb;
-  --texto-suave: #98a2b8;
-  --primaria: #3b6cff;
-  --primaria-forte: #2a55e0;
-  --bom: #3ddc84;
-  --medio: #ffb547;
-  --ruim: #ff5d5d;
-  --papel: #f6f8fc;
-  --papel-texto: #111827;
-  --papel-suave: #5b6476;
-  --papel-borda: #e3e8f1;
-  --marca: #1d4ed8;
-  --fonte: "Instrument Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-[hidden] { display: none !important; }
-html { scroll-behavior: smooth; }
-body { background: var(--fundo); color: var(--texto); font-family: var(--fonte); font-size: 17px; line-height: 1.6; }
-.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.miolo { max-width: 1160px; margin: 0 auto; }
-section .miolo { padding-block: 128px; }
-h1, h2, h3 { margin: 0; text-wrap: balance; letter-spacing: -0.03em; }
-h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1.02; font-weight: 700; }
-h2 { font-size: clamp(2rem, 4.2vw, 3.25rem); line-height: 1.06; font-weight: 700; }
-h3 { font-size: 1.2rem; line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; }
-p { margin: 0; }
-.suave { color: var(--texto-suave); }
-.lead { font-size: 1.18rem; color: var(--texto-suave); max-width: 58ch; }
-.pilula { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.02em;
-  background: var(--painel-2); border: 1px solid var(--borda); border-radius: 999px; padding: 6px 12px; color: var(--texto-suave); }
-.pilula i { width: 7px; height: 7px; border-radius: 50%; background: var(--bom); display: inline-block; }
-.rotulo { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primaria); }
-a { color: var(--primaria); }
-:focus-visible { outline: 3px solid var(--primaria); outline-offset: 3px; border-radius: 6px; }
-
-.botao { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 1rem var(--fonte); text-decoration: none; cursor: pointer;
-  border-radius: 8px; padding: 13px 20px; border: 1px solid transparent; background: var(--primaria); color: #fff; transition: background 0.15s; }
-.botao:hover { background: var(--primaria-forte); }
-.botao.contorno { background: transparent; border-color: var(--borda); color: var(--texto); }
-.botao.contorno:hover { border-color: var(--texto-suave); }
-.botao.discreto { background: none; color: var(--texto); padding-inline: 4px; }
-.botao svg { width: 18px; height: 18px; }
-
-/* navegação */
-nav.topo { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(7, 9, 15, 0.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--borda); }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--fundo); }
-nav .miolo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
-.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.12rem; color: var(--texto); text-decoration: none; letter-spacing: -0.02em; }
-.logo .selo { width: 30px; height: 30px; border-radius: 8px; background: var(--primaria); display: grid; place-items: center; }
-.logo .selo svg { width: 17px; height: 17px; }
-.logo span { color: var(--texto-suave); font-weight: 500; }
-nav .links { display: flex; align-items: center; gap: 24px; font-size: 0.95rem; }
-nav .links a:not(.botao) { color: var(--texto-suave); text-decoration: none; }
-nav .links a:not(.botao):hover { color: var(--texto); }
-nav .botao { padding: 9px 16px; font-size: 0.93rem; }
-
-/* hero */
-.hero .miolo { padding-block: 88px 112px; display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
-.hero-texto { display: grid; gap: 24px; min-width: 0; justify-items: start; }
-.hero-acoes { display: flex; flex-wrap: wrap; gap: 12px; }
-.fatos { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--mono); font-size: 0.82rem; color: var(--texto-suave); }
-.fatos span::before { content: "✓ "; color: var(--bom); }
-
-.demo { position: relative; min-width: 0; background: var(--painel); border: 1px solid var(--borda); border-radius: 14px; box-shadow: 0 0 120px -20px rgba(59, 108, 255, 0.55); overflow: hidden; }
-.demo-barra { display: flex; gap: 8px; padding: 14px; border-bottom: 1px solid var(--borda); }
-.demo-barra input { flex: 1; min-width: 0; font: 500 0.95rem var(--mono); color: var(--texto); background: var(--painel-2); border: 1px solid var(--borda); border-radius: 8px; padding: 10px 12px; }
-.demo-barra input:focus { outline: none; border-color: var(--primaria); }
-.demo-barra .botao { padding: 10px 16px; font-size: 0.93rem; white-space: nowrap; }
-.demo-corpo { padding: 20px; display: grid; gap: 18px; }
-.demo-cab { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.demo-cab h3 { font-size: 1.05rem; } .demo-cab p { font-family: var(--mono); font-size: 0.8rem; color: var(--texto-suave); }
-.dial { --v: 0; --c: var(--ruim); width: 104px; height: 104px; flex: none; border-radius: 50%; display: grid; place-items: center;
-  background: conic-gradient(var(--c) calc(var(--v) * 1%), var(--painel-2) 0); }
-.dial::before { content: ""; grid-area: 1 / 1; width: 84px; height: 84px; border-radius: 50%; background: var(--painel); }
-.dial b { grid-area: 1 / 1; font: 700 2rem var(--mono); color: var(--c); font-variant-numeric: tabular-nums; }
-.google { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.google div { background: var(--painel-2); border-radius: 8px; padding: 10px 6px; text-align: center; }
-.google b { display: block; font: 700 1.25rem var(--mono); font-variant-numeric: tabular-nums; }
-.google small { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--texto-suave); }
-.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; min-height: 196px; }
-.checklist li { display: grid; grid-template-columns: 22px 1fr auto; gap: 10px; align-items: center; font-size: 0.9rem; padding: 8px 10px;
-  border-radius: 8px; background: var(--painel-2); }
-.checklist li small { font-family: var(--mono); font-size: 0.72rem; color: var(--texto-suave); }
-.checklist li.verificando { color: var(--texto-suave); }
-.checklist li.verificando .st { animation: girar 0.8s linear infinite; display: inline-block; }
-.demo-rodape { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-family: var(--mono); font-size: 0.75rem; color: var(--texto-suave); }
-.demo-rodape .pronto { color: var(--bom); }
-@keyframes girar { to { transform: rotate(360deg); } }
-
-/* faixa de verificações */
-.esteira { border-block: 1px solid var(--borda); overflow: hidden; }
-.esteira .trilho { display: flex; gap: 40px; padding-block: 18px; width: max-content; font-family: var(--mono); font-size: 0.86rem; color: var(--texto-suave); }
-.esteira .trilho span::before { content: "● "; color: var(--primaria); }
-@media (prefers-reduced-motion: no-preference) { .esteira .trilho { animation: rolar 45s linear infinite; } }
-@keyframes rolar { to { transform: translateX(-50%); } }
-
-/* cabeçalho de seção */
-.cabeca { display: grid; gap: 16px; margin-bottom: 56px; max-width: 760px; }
-
-/* marca */
-.marca-grade { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; align-items: start; }
-.controles { display: grid; gap: 20px; min-width: 0; padding: 24px; background: var(--painel); border: 1px solid var(--borda); border-radius: 14px; }
-label { display: grid; gap: 8px; font-size: 0.92rem; font-weight: 600; }
-input[type=text], input:not([type]), textarea { font: 400 1rem var(--fonte); color: var(--texto); background: var(--painel-2); border: 1px solid var(--borda); border-radius: 8px; padding: 11px 12px; width: 100%; }
-input:focus, textarea:focus { outline: none; border-color: var(--primaria); }
-.cores { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.cores button { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--painel); box-shadow: 0 0 0 1px var(--borda); cursor: pointer; }
-.cores button[aria-pressed=true] { box-shadow: 0 0 0 2px var(--texto); }
-.cores input[type=color] { width: 40px; height: 36px; border: 1px solid var(--borda); border-radius: 8px; background: var(--painel-2); padding: 2px; cursor: pointer; }
-.docs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; min-width: 0; }
-.doc { background: var(--papel); color: var(--papel-texto); border-radius: 10px; padding: 18px; display: grid; gap: 12px; align-content: start; min-width: 0;
-  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8); font-size: 0.82rem; line-height: 1.45; }
-.doc-topo { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding-bottom: 10px; border-bottom: 3px solid var(--marca); }
-.doc-logo { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--marca); min-width: 0; }
-.doc-logo i { flex: none; width: 24px; height: 24px; border-radius: 6px; background: var(--marca); color: #fff; font-style: normal; display: grid; place-items: center; font-size: 0.8rem; }
-.doc-logo span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.doc-topo small { color: var(--papel-suave); font-size: 0.68rem; text-align: right; flex: none; }
-.doc h4 { margin: 0; font-size: 1rem; letter-spacing: -0.01em; }
-.doc .mini { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-.doc .mini-dial { width: 54px; height: 54px; border-radius: 50%; border: 5px solid #d97706; display: grid; place-items: center; font: 700 1.05rem var(--mono); color: #d97706; flex: none; }
-.doc .t { color: var(--marca); font-weight: 700; font-size: 0.85rem; }
-.doc ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
-.doc li { padding: 5px 8px; border-radius: 5px; background: #fff; border: 1px solid var(--papel-borda); }
-.doc .linha { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--papel-borda); }
-.doc .total { display: flex; justify-content: space-between; font-weight: 700; background: #ecfdf3; color: #166534; padding: 8px; border-radius: 6px; }
-.doc .rodape { color: var(--papel-suave); font-size: 0.68rem; border-top: 1px solid var(--papel-borda); padding-top: 8px; }
-
-/* abas */
-.abas { display: flex; gap: 4px; border-bottom: 1px solid var(--borda); margin-bottom: 32px; overflow-x: auto; }
-.abas button { font: 600 1rem var(--fonte); color: var(--texto-suave); background: none; border: 0; border-bottom: 2px solid transparent; padding: 12px 16px; cursor: pointer; white-space: nowrap; }
-.abas button[aria-selected=true] { color: var(--texto); border-bottom-color: var(--primaria); }
-.painel-aba { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: center; }
-.painel-aba > div { min-width: 0; display: grid; gap: 16px; }
-.painel-aba ul { margin: 0; padding-left: 20px; color: var(--texto-suave); display: grid; gap: 6px; }
-.chat { background: #0b141a; border-radius: 14px; padding: 18px; display: grid; gap: 10px; border: 1px solid var(--borda); }
-.chat-topo { display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid #1f2c33; font-size: 0.9rem; }
-.chat-topo i { width: 32px; height: 32px; border-radius: 50%; background: #2a3942; display: grid; place-items: center; font-style: normal; font-weight: 700; }
-.bolha { max-width: 88%; padding: 9px 12px; border-radius: 10px; font-size: 0.9rem; line-height: 1.45; white-space: pre-line; }
-.bolha.eu { justify-self: end; background: #005c4b; color: #e9edef; border-top-right-radius: 2px; }
-.bolha.ele { justify-self: start; background: #202c33; color: #e9edef; border-top-left-radius: 2px; }
-.bolha small { display: block; text-align: right; font-size: 0.68rem; color: #8696a0; margin-top: 4px; }
-
-/* calculadora */
-.calc { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--painel); border: 1px solid var(--borda); border-radius: 14px; overflow: hidden; }
-.calc-entradas { padding: 32px; display: grid; gap: 28px; border-right: 1px solid var(--borda); min-width: 0; }
-.campo-faixa { display: grid; gap: 10px; }
-.campo-faixa .topo-faixa { display: flex; justify-content: space-between; gap: 12px; font-weight: 600; font-size: 0.95rem; }
-.campo-faixa output { font-family: var(--mono); color: var(--primaria); font-variant-numeric: tabular-nums; }
-input[type=range] { width: 100%; accent-color: var(--primaria); }
-.calc-saida { padding: 32px; display: grid; gap: 20px; align-content: start; min-width: 0; }
-.numero-grande { font: 700 clamp(2.4rem, 5vw, 3.6rem) var(--mono); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; line-height: 1; }
-.calc-linhas { display: grid; gap: 10px; font-size: 0.95rem; }
-.calc-linhas div { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--borda); }
-.calc-linhas b { font-family: var(--mono); font-variant-numeric: tabular-nums; }
-.aviso-calc { font-size: 0.85rem; color: var(--texto-suave); }
-
-/* verificações */
-.categorias { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-.categorias button { font: 600 0.92rem var(--fonte); color: var(--texto-suave); background: var(--painel); border: 1px solid var(--borda); border-radius: 999px; padding: 9px 16px; cursor: pointer; }
-.categorias button[aria-pressed=true] { color: #fff; background: var(--primaria); border-color: var(--primaria); }
-.lista-checks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.lista-checks div { background: var(--painel); border: 1px solid var(--borda); border-radius: 10px; padding: 16px 18px; display: grid; gap: 4px; min-width: 0; }
-.lista-checks b { font-weight: 600; } .lista-checks span { color: var(--texto-suave); font-size: 0.93rem; }
-
-/* passos */
-.passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: p; }
-.passos div { display: grid; gap: 10px; align-content: start; min-width: 0; padding-top: 20px; border-top: 1px solid var(--borda); }
-.passos div::before { counter-increment: p; content: "0" counter(p); font: 700 0.9rem var(--mono); color: var(--primaria); }
-
-/* planos */
-.planos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.plano { background: var(--painel); border: 1px solid var(--borda); border-radius: 14px; padding: 28px; display: grid; gap: 16px; align-content: start; min-width: 0; }
-.plano.destaque { border-color: var(--primaria); box-shadow: 0 0 80px -30px rgba(59, 108, 255, 0.6); }
-.plano .preco { font: 700 2.6rem var(--mono); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
-.plano .preco small { font: 400 0.95rem var(--fonte); color: var(--texto-suave); letter-spacing: 0; }
-.plano ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--texto-suave); font-size: 0.95rem; }
-.plano li::before { content: "✓  "; color: var(--bom); }
-.plano .botao { margin-top: 8px; }
-
-/* perguntas */
-.faq { max-width: 820px; }
-details { border-bottom: 1px solid var(--borda); padding-block: 20px; }
-summary { cursor: pointer; font-weight: 600; font-size: 1.08rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; font-family: var(--mono); color: var(--primaria); }
-details[open] summary::after { content: "–"; }
-details p { margin-top: 12px; color: var(--texto-suave); max-width: 65ch; }
-
-/* chamada final */
-.final { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-.final > div { display: grid; gap: 20px; min-width: 0; }
-.final form { display: grid; gap: 16px; padding: 28px; background: var(--painel); border: 1px solid var(--borda); border-radius: 14px; box-shadow: 0 0 120px -40px rgba(59, 108, 255, 0.5); }
-textarea { min-height: 110px; resize: vertical; }
-.status { min-height: 1.5em; font-size: 0.92rem; color: var(--bom); }
-.contato { font-family: var(--mono); font-size: 1rem; }
-footer .miolo { padding-block: 32px; border-top: 1px solid var(--borda); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--texto-suave); font-size: 0.85rem; }
-
-@media (max-width: 960px) {
-  .hero .miolo, .marca-grade, .painel-aba, .final, .calc { grid-template-columns: 1fr; }
-  .calc-entradas { border-right: 0; border-bottom: 1px solid var(--borda); }
-  .planos, .passos { grid-template-columns: 1fr; }
-  section .miolo { padding-block: 72px; }
-  .hero .miolo { padding-block: 48px 72px; }
-  nav .links a:not(.botao) { display: none; }
-}
-@media (max-width: 620px) {
-  .docs, .lista-checks { grid-template-columns: 1fr; }
-  .google { grid-template-columns: repeat(2, 1fr); }
-  .calc-entradas, .calc-saida { padding: 22px; }
-  .demo-barra { flex-wrap: wrap; } .demo-barra .botao { flex: 1; }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .checklist li.verificando .st { animation: none; } }
-</style>
-
+<link rel="stylesheet" href="assets/estilo.css">
+<script src="config.js" defer></script>
+<script src="assets/comum.js" defer></script>
+<script src="assets/inicio.js" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 <nav class="topo gutter" aria-label="Principal">
   <div class="miolo">
-    <a class="logo" href="#topo">
-      <span class="selo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-      Sites <span>em Dia</span>
-    </a>
-    <div class="links">
-      <a href="#marca">Sua marca</a>
-      <a href="#entregas">Entregas</a>
-      <a href="#calculadora">Calculadora</a>
-      <a href="#planos">Planos</a>
-      <a class="botao" href="#teste">Testar grátis</a>
-    </div>
+    <a class="logo" href="index.html"><span class="selo-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"
+stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Sites <span>em Dia</span></a>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="links" id="menu-links"><a href="index.html" aria-current="page">Início</a><a href="ferramentas.html">Ferramentas grátis</a><a href="precos.html">Preços</a><a href="ajuda.html">Ajuda</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a class="botao" href="precos.html#planos">Assinar</a></div>
   </div>
 </nav>
-
-<header class="hero gutter" id="topo">
+<main id="conteudo">
+<header class="hero gutter grade-fundo">
   <div class="miolo">
     <div class="hero-texto">
       <span class="pilula"><i></i>Laudos white label para agências</span>
       <h1>O laudo do site do seu cliente em 2 minutos. Com a sua marca.</h1>
-      <p class="lead">Nota do Google, segurança, LGPD, SEO e botões de contato, explicados em português que o dono do negócio entende. Cada laudo já vem com a proposta de correção e a mensagem de WhatsApp para vender.</p>
-      <div class="hero-acoes">
-        <a class="botao" href="#teste">Pedir 3 laudos grátis
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="botao contorno" href="#entregas">Ver um laudo</a>
+      <p class="lead">Cole um site abaixo e veja agora a nota real do Google. O laudo completo inclui segurança, LGPD, SEO e botões de contato, além da proposta de correção e da mensagem de WhatsApp para vender.</p>
+      <div style="width:100%;display:grid;gap:8px">
+        <form class="campo-teste" data-teste="#resultado-hero" aria-label="Testar um site">
+          <input id="teste-hero" aria-label="Endereço do site" placeholder="sitedocliente.com.br" autocomplete="off" spellcheck="false" inputmode="url">
+          <button class="botao" type="submit">Testar grátis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <p class="status" data-status role="status"></p>
       </div>
-      <div class="fatos"><span>25 verificações</span><span>Google Lighthouse</span><span>PDF com o seu logo</span></div>
+      <div class="fatos"><span>Notas reais do Google</span><span>Sem cadastro</span><span>PDF com o seu logo</span></div>
     </div>
-
-    <div class="demo" aria-label="Demonstração do laudo">
-      <form class="demo-barra" id="demo-form">
-        <input id="demo-url" aria-label="Endereço do site para a demonstração" value="clinicaexemplo.com.br" autocomplete="off" spellcheck="false">
-        <button class="botao" type="submit">Rodar laudo</button>
-      </form>
-      <div class="demo-corpo">
-        <div class="demo-cab">
-          <div><h3 id="demo-nome">Clínica Exemplo</h3><p id="demo-host">clinicaexemplo.com.br</p></div>
-          <div class="dial" id="demo-dial" style="--v:58;--c:var(--medio)"><b id="demo-nota">58</b></div>
-        </div>
-        <div class="google" aria-label="Notas do Google no celular">
-          <div><b id="g-vel" style="color:var(--ruim)">34</b><small>Velocidade</small></div>
-          <div><b id="g-ace" style="color:var(--medio)">78</b><small>Acessib.</small></div>
-          <div><b id="g-bp" style="color:var(--medio)">74</b><small>Práticas</small></div>
-          <div><b id="g-seo" style="color:var(--bom)">92</b><small>SEO</small></div>
-        </div>
-        <ul class="checklist" id="demo-lista" aria-live="polite"></ul>
-        <div class="demo-rodape"><span>Demonstração com dados simulados</span><span class="pronto" id="demo-status">● Laudo pronto</span></div>
-      </div>
+    <div class="hero-painel">
+      <div class="painel borda-gradiente brilho resultado" id="resultado-hero" aria-live="polite"></div>
     </div>
   </div>
 </header>
 
-<div class="esteira" aria-hidden="true">
-  <div class="trilho" id="trilho"></div>
-</div>
+<div class="esteira" aria-hidden="true"><div class="trilho" id="trilho"></div></div>
 
 <section class="gutter" id="marca">
   <div class="miolo">
     <div class="cabeca">
       <p class="rotulo">Sua marca, não a nossa</p>
       <h2>O cliente da sua agência vê só a sua marca.</h2>
-      <p class="lead">Logo, cor e contatos da agência no laudo e na proposta. A Sites em Dia não aparece em lugar nenhum. Teste aqui:</p>
+      <p class="lead">Logo, cor e contatos da agência no laudo e na proposta. A Sites em Dia não aparece em lugar nenhum. Teste com o seu logo:</p>
     </div>
     <div class="marca-grade">
-      <div class="controles">
+      <div class="controles painel">
+        <label class="upload" for="m-logo">
+          <span class="previa-logo" id="previa-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg></span>
+          <span>Enviar o logo da agência<br><small class="suave">PNG, JPG ou SVG. O arquivo fica só no seu navegador.</small></span>
+          <input type="file" id="m-logo" accept="image/png,image/jpeg,image/svg+xml,image/webp">
+        </label>
         <label for="m-nome">Nome da agência<input id="m-nome" value="Agência Exemplo" maxlength="32" autocomplete="off"></label>
         <div style="display:grid;gap:8px">
-          <span style="font-size:0.92rem;font-weight:600">Cor da marca</span>
-          <div class="cores" id="cores">
+          <span style="font-size:0.92rem;font-weight:600" id="rotulo-cor">Cor da marca</span>
+          <div class="cores" id="cores" role="group" aria-labelledby="rotulo-cor">
             <button type="button" style="background:#1d4ed8" data-cor="#1d4ed8" aria-label="Azul" aria-pressed="true"></button>
             <button type="button" style="background:#0f766e" data-cor="#0f766e" aria-label="Verde" aria-pressed="false"></button>
             <button type="button" style="background:#c2410c" data-cor="#c2410c" aria-label="Laranja" aria-pressed="false"></button>
@@ -311,13 +84,13 @@ footer .miolo { padding-block: 32px; border-top: 1px solid var(--borda); display
         </div>
         <label for="m-zap">WhatsApp no rodapé<input id="m-zap" value="(11) 90000-0000" maxlength="20" autocomplete="off"></label>
       </div>
-      <div class="docs" id="docs">
+      <div class="docs">
         <article class="doc" aria-label="Prévia do laudo">
-          <div class="doc-topo"><div class="doc-logo"><i class="m-ini">A</i><span class="m-nome">Agência Exemplo</span></div><small>Laudo<br>23/10/2026</small></div>
+          <div class="doc-topo"><div class="doc-logo"><i class="m-ini">A</i><span class="m-nome">Agência Exemplo</span></div><small>Laudo<br><span class="hoje"></span></small></div>
           <div class="mini"><div><h4>Clínica Exemplo</h4><span style="color:var(--papel-suave)">clinicaexemplo.com.br</span></div><div class="mini-dial">58</div></div>
           <span class="t">O que corrigir primeiro</span>
-          <ul><li>❌ Abre em 9,8 s no celular</li><li>❌ Pixel ativo antes dos cookies</li><li>⚠️ Sem botão de WhatsApp</li></ul>
-          <span class="rodape">Preparado por <b class="m-nome">Agência Exemplo</b> · <span class="m-zap">(11) 90000-0000</span></span>
+          <ul><li>❌ Conteúdo demora 9,8 s no celular</li><li>❌ Pixel ativo antes dos cookies</li><li>⚠️ Sem botão de WhatsApp</li></ul>
+          <span class="rodape-doc">Preparado por <b class="m-nome">Agência Exemplo</b> · <span class="m-zap">(11) 90000-0000</span></span>
         </article>
         <article class="doc" aria-label="Prévia da proposta">
           <div class="doc-topo"><div class="doc-logo"><i class="m-ini">A</i><span class="m-nome">Agência Exemplo</span></div><small>Proposta<br>válida 7 dias</small></div>
@@ -326,14 +99,14 @@ footer .miolo { padding-block: 32px; border-top: 1px solid var(--borda); display
             <div class="linha"><span>Cookies e LGPD</span><b>R$ 250</b></div>
             <div class="linha"><span>Botões de contato</span><b>R$ 150</b></div></div>
           <div class="total"><span>Pacote completo</span><span>R$ 680</span></div>
-          <span class="rodape"><b class="m-nome">Agência Exemplo</b> · <span class="m-zap">(11) 90000-0000</span></span>
+          <span class="rodape-doc"><b class="m-nome">Agência Exemplo</b> · <span class="m-zap">(11) 90000-0000</span></span>
         </article>
       </div>
     </div>
   </div>
 </section>
 
-<section class="gutter" id="entregas" style="background:var(--painel)">
+<section class="gutter faixa-2" id="entregas">
   <div class="miolo">
     <div class="cabeca">
       <p class="rotulo">Três arquivos por site</p>
@@ -344,55 +117,52 @@ footer .miolo { padding-block: 32px; border-top: 1px solid var(--borda); display
       <button role="tab" id="aba-proposta" aria-controls="p-proposta" aria-selected="false" tabindex="-1">Proposta comercial</button>
       <button role="tab" id="aba-zap" aria-controls="p-zap" aria-selected="false" tabindex="-1">Mensagem de WhatsApp</button>
     </div>
-
     <div class="painel-aba" role="tabpanel" id="p-laudo" aria-labelledby="aba-laudo">
       <div>
         <h3>O diagnóstico, com prints e prioridades</h3>
         <p class="suave">Nota geral de 0 a 100, as quatro notas do Google, prints do site no computador e no celular e o checklist completo. Os 5 problemas mais urgentes aparecem primeiro.</p>
-        <ul><li>Linguagem simples, sem jargão</li><li>❌ e ⚠️ mostram onde está o dinheiro</li><li>Detalhes técnicos no final, para quem vai corrigir</li></ul>
+        <ul><li>Linguagem simples, sem jargão</li><li>Os ❌ e ⚠️ mostram onde está o dinheiro</li><li>Detalhes técnicos no final, para quem vai corrigir</li></ul>
       </div>
       <article class="doc" style="max-width:480px;justify-self:center;width:100%">
-        <div class="doc-topo"><div class="doc-logo"><i class="m-ini">A</i><span class="m-nome">Agência Exemplo</span></div><small>Laudo<br>23/10/2026</small></div>
+        <div class="doc-topo"><div class="doc-logo"><i class="m-ini">A</i><span class="m-nome">Agência Exemplo</span></div><small>Laudo<br><span class="hoje"></span></small></div>
         <div class="mini"><div><h4>Auditoria do site</h4><span style="color:var(--papel-suave)">Clínica Exemplo · clinicaexemplo.com.br</span></div><div class="mini-dial">58</div></div>
         <span class="t">Nota do Google (celular)</span>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;font-family:var(--mono)">
-          <div class="linha" style="display:block;border:0"><b style="color:#dc2626;font-size:1.1rem">34</b><br><small>Velocidade</small></div>
-          <div class="linha" style="display:block;border:0"><b style="color:#d97706;font-size:1.1rem">78</b><br><small>Acessib.</small></div>
-          <div class="linha" style="display:block;border:0"><b style="color:#d97706;font-size:1.1rem">74</b><br><small>Práticas</small></div>
-          <div class="linha" style="display:block;border:0"><b style="color:#16a34a;font-size:1.1rem">92</b><br><small>SEO</small></div>
+          <div><b style="color:#dc2626;font-size:1.1rem">34</b><br><small>Velocidade</small></div>
+          <div><b style="color:#d97706;font-size:1.1rem">78</b><br><small>Acessib.</small></div>
+          <div><b style="color:#d97706;font-size:1.1rem">74</b><br><small>Práticas</small></div>
+          <div><b style="color:#16a34a;font-size:1.1rem">92</b><br><small>SEO</small></div>
         </div>
         <span class="t">Checklist</span>
         <ul><li>✅ Cadeado (HTTPS)</li><li>❌ Rastreio antes do consentimento</li><li>⚠️ 9 de 14 imagens sem descrição</li><li>⚠️ Telefone não é clicável</li></ul>
       </article>
     </div>
-
     <div class="painel-aba" role="tabpanel" id="p-proposta" aria-labelledby="aba-proposta" hidden>
       <div>
         <h3>A proposta se monta sozinha</h3>
-        <p class="suave">Cada problema encontrado vira um serviço com o preço da sua agência. Preço avulso, pacote com desconto, prazo, forma de pagamento, garantia e o que não está incluído.</p>
+        <p class="suave">Cada problema encontrado vira um serviço com o preço da sua agência: valor avulso, pacote com desconto, prazo, forma de pagamento, garantia e o que não está incluído.</p>
         <ul><li>Só entra o que aquele site precisa</li><li>Você define a sua tabela de preços</li><li>Critério de entrega: novo laudo com os itens em ✅</li></ul>
       </div>
       <article class="doc" style="max-width:480px;justify-self:center;width:100%">
-        <div class="doc-topo"><div class="doc-logo"><i class="m-ini">A</i><span class="m-nome">Agência Exemplo</span></div><small>Proposta nº 20261023<br>válida até 30/10</small></div>
+        <div class="doc-topo"><div class="doc-logo"><i class="m-ini">A</i><span class="m-nome">Agência Exemplo</span></div><small>Proposta comercial<br>válida 7 dias</small></div>
         <h4>Proposta comercial</h4>
         <div><div class="linha"><span>Otimização de velocidade<br><small style="color:var(--papel-suave)">❌ Velocidade no celular · ⚠️ 96 arquivos</small></span><b>R$ 400</b></div>
           <div class="linha"><span>Cookies e privacidade (LGPD)<br><small style="color:var(--papel-suave)">❌ Rastreio antes do consentimento</small></span><b>R$ 250</b></div>
           <div class="linha"><span>Ajustes para o Google<br><small style="color:var(--papel-suave)">⚠️ Imagens sem descrição</small></span><b>R$ 200</b></div>
           <div class="linha"><span>Botões de contato<br><small style="color:var(--papel-suave)">⚠️ Telefone não clicável</small></span><b>R$ 150</b></div></div>
         <div class="total"><span>Pacote completo (15% off)</span><span>R$ 850</span></div>
-        <span class="rodape">Pagamento 50% na aprovação e 50% na entrega · Garantia de 30 dias</span>
+        <span class="rodape-doc">Pagamento 50% na aprovação e 50% na entrega · Garantia de 30 dias</span>
       </article>
     </div>
-
     <div class="painel-aba" role="tabpanel" id="p-zap" aria-labelledby="aba-zap" hidden>
       <div>
         <h3>O primeiro contato já vem escrito</h3>
         <p class="suave">Uma mensagem com a nota e os 3 problemas que mais pesam, o texto para enviar o laudo e um lembrete educado. Copie, revise e envie.</p>
-        <ul><li>Personalizada com os dados de cada site</li><li>Tom de conversa, não de robô</li><li>Funciona para prospectar e para a carteira</li></ul>
+        <ul><li>Personalizada com os dados de cada site</li><li>Tom de conversa, não de robô</li><li>Serve para prospectar e para a carteira</li></ul>
       </div>
       <div class="chat" aria-label="Exemplo de conversa no WhatsApp">
         <div class="chat-topo"><i>C</i><div><b>Clínica Exemplo</b><br><small style="color:#8696a0">online</small></div></div>
-        <div class="bolha eu">Oi! Aqui é a Ana, da Agência Exemplo. Fiz uma análise gratuita do site da Clínica Exemplo e ele tirou 58/100.
+        <div class="bolha eu">Oi! Aqui é a Ana, da <span class="m-nome">Agência Exemplo</span>. Fiz uma análise gratuita do site da Clínica Exemplo e ele tirou 58/100.
 Os pontos que mais chamaram atenção:
 1. No celular, o conteúdo principal demora 9,8 s para aparecer
 2. O pixel de anúncio liga antes do aviso de cookies
@@ -409,37 +179,44 @@ Posso te mandar o laudo com os prints?<small>10:42 ✓✓</small></div>
   <div class="miolo">
     <div class="cabeca">
       <p class="rotulo">Calculadora</p>
-      <h2>Quanto a sua carteira pode render em correções?</h2>
-      <p class="lead">Ajuste com os números da sua agência. A conta usa só o que você informar.</p>
+      <h2>Quanto os laudos podem render para a sua agência?</h2>
+      <p class="lead">Use os números da sua agência. Os valores iniciais são conservadores; ajuste com a sua realidade.</p>
     </div>
-    <div class="calc">
+    <div class="calc painel">
       <div class="calc-entradas">
-        <div class="campo-faixa"><div class="topo-faixa"><label for="c-sites" style="display:inline">Sites para laudar por mês</label><output id="o-sites" for="c-sites">40</output></div>
-          <input type="range" id="c-sites" min="5" max="150" step="5" value="40"></div>
-        <div class="campo-faixa"><div class="topo-faixa"><label for="c-conv" style="display:inline">Quantos fecham alguma correção</label><output id="o-conv" for="c-conv">10%</output></div>
-          <input type="range" id="c-conv" min="2" max="40" step="1" value="10"></div>
-        <div class="campo-faixa"><div class="topo-faixa"><label for="c-ticket" style="display:inline">Valor médio de uma correção</label><output id="o-ticket" for="c-ticket">R$ 800</output></div>
-          <input type="range" id="c-ticket" min="200" max="5000" step="100" value="800"></div>
+        <div class="campo-faixa"><div class="topo-faixa"><label for="c-carteira">Clientes ativos da agência</label><output id="o-carteira" for="c-carteira">20</output></div>
+          <input type="range" id="c-carteira" min="0" max="150" step="1" value="20"><small>Um laudo por cliente por mês.</small></div>
+        <div class="campo-faixa"><div class="topo-faixa"><label for="c-prospect">Empresas novas prospectadas por mês</label><output id="o-prospect" for="c-prospect">20</output></div>
+          <input type="range" id="c-prospect" min="0" max="150" step="5" value="20"><small>Laudo grátis enviado para quem ainda não é cliente.</small></div>
+        <div class="campo-faixa"><div class="topo-faixa"><label for="c-conv-c">Clientes que compram uma correção</label><output id="o-conv-c" for="c-conv-c">5%</output></div>
+          <input type="range" id="c-conv-c" min="0" max="30" step="1" value="5"></div>
+        <div class="campo-faixa"><div class="topo-faixa"><label for="c-conv-p">Empresas novas que viram cliente</label><output id="o-conv-p" for="c-conv-p">2%</output></div>
+          <input type="range" id="c-conv-p" min="0" max="20" step="1" value="2"></div>
+        <div class="campo-faixa"><div class="topo-faixa"><label for="c-ticket">Valor médio de uma venda</label><output id="o-ticket" for="c-ticket">R$ 600</output></div>
+          <input type="range" id="c-ticket" min="200" max="5000" step="50" value="600"></div>
       </div>
       <div class="calc-saida" aria-live="polite">
-        <span class="rotulo">Faturamento estimado em correções por mês</span>
-        <div class="numero-grande" id="r-total">R$ 3.200</div>
+        <span class="rotulo">Vendas estimadas por mês</span>
+        <div class="numero-grande" id="r-total">R$ 0</div>
         <div class="calc-linhas">
-          <div><span>Correções vendidas</span><b id="r-vendas">4</b></div>
-          <div><span>Plano indicado</span><b id="r-plano">Agência · R$ 497</b></div>
-          <div><span>O plano se paga</span><b id="r-vezes">6,4 vezes</b></div>
+          <div><span>Laudos por mês</span><b id="r-laudos">0</b></div>
+          <div><span>Vendas para clientes atuais</span><b id="r-vendas-c">0</b></div>
+          <div><span>Clientes novos</span><b id="r-vendas-p">0</b></div>
+          <div><span>Plano indicado</span><b id="r-plano">–</b></div>
+          <div><span>Retorno sobre o plano</span><b id="r-vezes">–</b></div>
         </div>
-        <p class="aviso-calc">Estimativa com as premissas acima, sem impostos e custos de execução. Não é promessa de resultado.</p>
+        <p class="suave" style="font-size:.85rem">Estimativa com as premissas ao lado, antes de impostos e do custo de execução. Não é promessa de resultado.</p>
+        <a class="botao" href="precos.html" style="justify-self:start">Ver os planos</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="gutter" id="verificacoes" style="background:var(--painel)">
+<section class="gutter faixa-2" id="verificacoes">
   <div class="miolo">
     <div class="cabeca">
       <p class="rotulo">25 verificações</p>
-      <h2>O que o laudo olha em cada site.</h2>
+      <h2>O que o laudo completo olha em cada site.</h2>
     </div>
     <div class="categorias" id="categorias"></div>
     <div class="lista-checks" id="lista-checks" aria-live="polite"></div>
@@ -450,249 +227,70 @@ Posso te mandar o laudo com os prints?<small>10:42 ✓✓</small></div>
   <div class="miolo">
     <div class="cabeca"><p class="rotulo">Como funciona</p><h2>Do endereço ao PDF com a sua marca.</h2></div>
     <div class="passos">
-      <div><h3>Mande a sua marca</h3><p class="suave">Logo, cor e WhatsApp da agência. Uma vez só.</p></div>
+      <div><h3>Assine e mande a sua marca</h3><p class="suave">Logo, cor e WhatsApp da agência. Uma vez só.</p></div>
       <div><h3>Mande os sites</h3><p class="suave">Um site ou uma lista. Cada um é aberto num navegador real, no computador e no celular, e medido pelo Google Lighthouse.</p></div>
       <div><h3>Receba os arquivos</h3><p class="suave">Laudo, proposta e mensagem de cada site, com a sua marca, e uma planilha com as notas de todos.</p></div>
     </div>
   </div>
 </section>
 
-<section class="gutter" id="planos" style="background:var(--painel)">
+<section class="gutter compacta">
   <div class="miolo">
-    <div class="cabeca"><p class="rotulo">Planos</p><h2>Uma correção vendida já paga o mês.</h2><p class="lead">Sem fidelidade. Cancele quando quiser, com 30 dias de aviso.</p></div>
-    <div class="planos">
-      <div class="plano"><h3>Inicial</h3><div class="preco">R$ 297<small> /mês</small></div>
-        <ul><li>Até 20 laudos por mês</li><li>Laudo e proposta com a sua marca</li><li>Mensagem de WhatsApp pronta</li></ul>
-        <a class="botao contorno" href="#teste">Começar</a></div>
-      <div class="plano destaque"><span class="pilula" style="justify-self:start;color:var(--texto)"><i></i>Mais indicado</span><h3>Agência</h3><div class="preco">R$ 497<small> /mês</small></div>
-        <ul><li>Até 60 laudos por mês</li><li>Tudo do Inicial</li><li>Sua tabela de preços na proposta</li><li>Laudo em lote, com planilha de notas</li></ul>
-        <a class="botao" href="#teste">Começar</a></div>
-      <div class="plano"><h3>Carteira</h3><div class="preco">R$ 997<small> /mês</small></div>
-        <ul><li>Até 150 laudos por mês</li><li>Tudo do Agência</li><li>Laudo mensal dos seus clientes, com a evolução da nota</li></ul>
-        <a class="botao contorno" href="#teste">Começar</a></div>
+    <div class="cabeca"><p class="rotulo">Ferramentas grátis</p><h2>Diagnósticos rápidos, sem cadastro.</h2></div>
+    <div class="grade-3">
+      <a class="painel cartao" href="ferramentas.html#nota" style="text-decoration:none;color:inherit">
+        <span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 13l4-4M4 16a8 8 0 1 1 16 0"/></svg></span>
+        <h3>Nota do Google</h3><p class="suave">Velocidade, SEO, acessibilidade e boas práticas no celular.</p></a>
+      <a class="painel cartao" href="ferramentas.html#hospedagem" style="text-decoration:none;color:inherit">
+        <span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+        <h3>Onde o site está hospedado</h3><p class="suave">IP, provedor, país e servidores de DNS de qualquer domínio.</p></a>
+      <a class="painel cartao" href="ferramentas.html#email" style="text-decoration:none;color:inherit">
+        <span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <h3>Seus e-mails caem no spam?</h3><p class="suave">Confere SPF, DMARC e MX do domínio em segundos.</p></a>
     </div>
   </div>
 </section>
 
 <section class="gutter">
-  <div class="miolo faq">
-    <div class="cabeca"><p class="rotulo">Perguntas</p><h2>Antes de testar.</h2></div>
-    <details><summary>O cliente da minha agência vai saber que o laudo é de vocês?</summary><p>Não. O PDF sai com o seu logo, a sua cor e os seus contatos. A Sites em Dia não aparece em lugar nenhum.</p></details>
-    <details><summary>De onde vem a nota do Google?</summary><p>Do Lighthouse, o mesmo motor do Google PageSpeed Insights, simulando um celular em 4G. As faixas são as do Google: 90 ou mais é bom, de 50 a 89 precisa melhorar e abaixo de 50 é ruim.</p></details>
-    <details><summary>Preciso da senha ou do painel do site?</summary><p>Não. O laudo analisa a página inicial como um visitante comum vê. Não instala nada e não precisa de acesso.</p></details>
-    <details><summary>O laudo vale como parecer jurídico sobre LGPD?</summary><p>Não. Ele aponta indícios técnicos, como rastreadores ligados antes do aceite de cookies. A avaliação jurídica continua sendo de um advogado.</p></details>
-    <details><summary>Posso usar os meus preços na proposta?</summary><p>Sim. A proposta usa a tabela de serviços e preços da sua agência, e você ajusta cada item.</p></details>
-    <details><summary>Como funciona o teste grátis?</summary><p>Você manda o nome da agência e 3 sites. Devolvemos os laudos, as propostas e as mensagens com a sua marca. Sem cartão e sem compromisso.</p></details>
-  </div>
-</section>
-
-<section class="gutter" id="teste" style="background:var(--painel)">
-  <div class="miolo final">
-    <div>
-      <p class="rotulo">Teste grátis</p>
-      <h2>Mande 3 sites da sua carteira. Devolvemos os laudos com a sua marca.</h2>
-      <p class="lead">Veja o resultado nos sites dos seus próprios clientes antes de decidir.</p>
-      <p class="contato">WhatsApp: <span id="numero">+55 (11) 91852-1800</span></p>
+  <div class="miolo">
+    <div class="painel borda-gradiente brilho cta-final">
+      <div>
+        <p class="rotulo">Teste grátis</p>
+        <h2>Mande 3 sites da sua carteira. Devolvemos os laudos com a sua marca.</h2>
+        <p class="lead">Veja o resultado nos sites dos seus próprios clientes antes de assinar. Sem cartão.</p>
+      </div>
+      <div class="cta-acoes">
+        <a class="botao zap grande" id="cta-zap" href="#" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+        <a class="botao contorno grande" href="precos.html">Ver planos e assinar</a>
+        <span class="suave" style="font-size:.9rem;text-align:center">WhatsApp <span data-telefone></span></span>
+      </div>
     </div>
-    <form id="pedido">
-      <label for="p-agencia">Nome da agência<input id="p-agencia" required placeholder="Agência Exemplo" autocomplete="organization"></label>
-      <label for="p-sites">3 sites para o teste<textarea id="p-sites" required placeholder="cliente1.com.br&#10;cliente2.com.br&#10;cliente3.com.br"></textarea></label>
-      <button class="botao" type="submit">Montar pedido para o WhatsApp</button>
-      <p class="status" id="p-status" role="status"></p>
-      <a class="botao contorno" id="p-abrir" href="https://wa.me/5511918521800" target="_blank" rel="noopener" hidden>Abrir o WhatsApp</a>
-    </form>
   </div>
 </section>
 
-<footer class="gutter">
-  <div class="miolo"><span>Sites em Dia · Laudos de sites com a marca da sua agência</span><span>Análise automática da página inicial com navegador real e Google Lighthouse. Não é teste de invasão nem parecer jurídico.</span></div>
+</main>
+<footer class="rodape gutter">
+  <div class="miolo">
+    <div class="rodape-grade">
+      <div class="rodape-marca">
+        <a class="logo" href="index.html"><span class="selo-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"
+stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Sites <span>em Dia</span></a>
+        <p>Laudos de sites com a marca da sua agência. Velocidade, segurança, LGPD e SEO, explicados para o dono do negócio.</p>
+        <div class="selos" aria-label="Selos de confiança">
+          <span class="selo-confianca" title="Este site usa conexão criptografada">🔒 Conexão segura HTTPS</span>
+          <span class="selo-confianca" title="Não usamos Google Analytics, pixels de anúncio nem cookies de rastreio">🛡️ Sem cookies de rastreio</span>
+          <a class="selo-confianca" id="selo-safe" target="_blank" rel="noopener" href="https://transparencyreport.google.com/safe-browsing/search">✓ Consultar no Google Safe Browsing</a>
+        </div>
+      </div>
+      <div><h4>Produto</h4><a href="ferramentas.html">Ferramentas grátis</a><a href="precos.html">Preços</a><a href="index.html#entregas">O que você recebe</a></div>
+      <div><h4>Empresa</h4><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a href="ajuda.html">Ajuda e documentação</a></div>
+      <div><h4>Legal</h4><a href="termos.html">Termos de uso</a><a href="privacidade.html">Política de privacidade</a></div>
+    </div>
+    <div class="rodape-base">
+      <span>© 2026 Sites em Dia. Todos os direitos reservados.</span>
+      <span class="contato-rodape" data-contato></span>
+    </div>
+  </div>
 </footer>
-
-<script>
-const WHATSAPP = "5511918521800";
-const reduzir = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const faixa = n => n >= 90 ? "var(--bom)" : n >= 50 ? "var(--medio)" : "var(--ruim)";
-const brl = n => "R$ " + Math.round(n).toLocaleString("pt-BR");
-
-/* ---------- demonstração do hero ---------- */
-const VERIFICACOES = [
-  ["Velocidade no celular", "Google"], ["Cadeado (HTTPS)", "Segurança"], ["Aviso de cookies", "LGPD"],
-  ["Rastreio antes do consentimento", "LGPD"], ["Título e descrição no Google", "SEO"], ["Botão de WhatsApp", "Contato"],
-  ["Prévia ao compartilhar o link", "Redes"], ["Links quebrados", "Erros"]
-];
-function semente(texto) { let h = 2166136261; for (const c of texto) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return () => ((h = Math.imul(h ^ (h >>> 15), 2246822507) >>> 0) % 1000) / 1000; }
-function nomeDoSite(host) {
-  const base = host.replace(/^www\./, "").split(".")[0].replace(/[-_]+/g, " ");
-  return base.replace(/\b\w/g, l => l.toUpperCase()) || "Seu cliente";
-}
-// O site de exemplo usa os mesmos números das prévias de laudo e proposta mais abaixo.
-const EXEMPLO = { g: { vel: 34, ace: 78, bp: 74, seo: 92 }, nota: 58, itens: [
-  { nome: "Velocidade no celular", cat: "Google", st: "erro" }, { nome: "Rastreio antes do consentimento", cat: "LGPD", st: "erro" },
-  { nome: "Botão de WhatsApp", cat: "Contato", st: "aviso" }, { nome: "Imagens sem descrição", cat: "SEO", st: "aviso" },
-  { nome: "Cadeado (HTTPS)", cat: "Segurança", st: "ok" }, { nome: "Prévia ao compartilhar o link", cat: "Redes", st: "ok" }] };
-function resultado(host) {
-  if (host === "clinicaexemplo.com.br") return EXEMPLO;
-  const r = semente(host);
-  const g = { vel: 18 + Math.round(r() * 70), ace: 60 + Math.round(r() * 38), bp: 55 + Math.round(r() * 42), seo: 70 + Math.round(r() * 30) };
-  const itens = VERIFICACOES.map(([nome, cat], i) => {
-    const x = r(); const st = i === 0 ? (g.vel >= 90 ? "ok" : g.vel >= 50 ? "aviso" : "erro") : x < 0.25 ? "erro" : x < 0.55 ? "aviso" : "ok";
-    return { nome, cat, st };
-  });
-  const peso = { ok: 1, aviso: 0.5, erro: 0 };
-  const nota = Math.round(100 * (itens.reduce((s, i) => s + peso[i.st], 0) / itens.length) * 0.7 + g.vel * 0.3);
-  return { g, itens, nota };
-}
-const icone = { ok: "✅", aviso: "⚠️", erro: "❌" };
-const lista = document.getElementById("demo-lista");
-function pintarNotas(res, nota) {
-  const dial = document.getElementById("demo-dial");
-  dial.style.setProperty("--v", nota); dial.style.setProperty("--c", faixa(nota));
-  document.getElementById("demo-nota").textContent = nota;
-  for (const [id, v] of [["g-vel", res.g.vel], ["g-ace", res.g.ace], ["g-bp", res.g.bp], ["g-seo", res.g.seo]]) {
-    const el = document.getElementById(id); el.textContent = v; el.style.color = faixa(v);
-  }
-}
-function mostrarFinal(res) {
-  lista.innerHTML = "";
-  res.itens.filter(i => i.st !== "ok").concat(res.itens.filter(i => i.st === "ok")).slice(0, 6).forEach(i => {
-    const li = document.createElement("li");
-    li.innerHTML = `<span>${icone[i.st]}</span><span></span><small>${i.cat}</small>`;
-    li.children[1].textContent = i.nome;
-    lista.append(li);
-  });
-  pintarNotas(res, res.nota);
-  const st = document.getElementById("demo-status"); st.textContent = "● Laudo pronto"; st.className = "pronto";
-}
-let rodando = 0;
-async function rodar(host) {
-  const id = ++rodando;
-  const res = resultado(host);
-  document.getElementById("demo-host").textContent = host;
-  document.getElementById("demo-nome").textContent = host === "clinicaexemplo.com.br" ? "Clínica Exemplo" : nomeDoSite(host);
-  if (reduzir) return mostrarFinal(res);
-  const st = document.getElementById("demo-status"); st.textContent = "● Analisando..."; st.className = "";
-  pintarNotas({ g: { vel: 0, ace: 0, bp: 0, seo: 0 } }, 0);
-  lista.innerHTML = "";
-  const espera = ms => new Promise(r => setTimeout(r, ms));
-  for (const i of res.itens.slice(0, 6)) {
-    if (id !== rodando) return;
-    const li = document.createElement("li"); li.className = "verificando";
-    li.innerHTML = `<span class="st">◌</span><span></span><small>${i.cat}</small>`; li.children[1].textContent = i.nome;
-    lista.append(li); await espera(260);
-    li.className = ""; li.children[0].textContent = icone[i.st];
-  }
-  const inicio = performance.now();
-  await new Promise(fim => {
-    const passo = t => {
-      if (id !== rodando) return fim();
-      const k = Math.min(1, (t - inicio) / 900), e = 1 - Math.pow(1 - k, 3);
-      pintarNotas({ g: { vel: Math.round(res.g.vel * e), ace: Math.round(res.g.ace * e), bp: Math.round(res.g.bp * e), seo: Math.round(res.g.seo * e) } }, Math.round(res.nota * e));
-      k < 1 ? requestAnimationFrame(passo) : fim();
-    };
-    requestAnimationFrame(passo);
-  });
-  if (id === rodando) mostrarFinal(res);
-}
-document.getElementById("demo-form").addEventListener("submit", ev => {
-  ev.preventDefault();
-  let host = document.getElementById("demo-url").value.trim().replace(/^https?:\/\//, "").split("/")[0].toLowerCase();
-  if (!host.includes(".")) host = (host || "seucliente") + ".com.br";
-  document.getElementById("demo-url").value = host;
-  rodar(host);
-});
-mostrarFinal(resultado("clinicaexemplo.com.br"));
-
-/* ---------- esteira de verificações ---------- */
-const NOMES = ["Velocidade no celular", "Cadeado HTTPS", "Aviso de cookies", "Pixel antes do consentimento", "Título no Google", "Descrição no Google",
-  "Botão de WhatsApp", "Telefone clicável", "Prévia no WhatsApp", "Imagens sem descrição", "Links quebrados", "Acessibilidade", "HSTS", "Política de privacidade"];
-document.getElementById("trilho").innerHTML = NOMES.concat(NOMES).map(n => `<span>${n}</span>`).join("");
-
-/* ---------- sua marca ---------- */
-const docsAlvo = document.body;
-function aplicarMarca() {
-  const nome = document.getElementById("m-nome").value.trim() || "Sua Agência";
-  document.querySelectorAll(".m-nome").forEach(e => e.textContent = nome);
-  document.querySelectorAll(".m-ini").forEach(e => e.textContent = nome[0].toUpperCase());
-  document.querySelectorAll(".m-zap").forEach(e => e.textContent = document.getElementById("m-zap").value);
-}
-function aplicarCor(cor) {
-  docsAlvo.style.setProperty("--marca", cor);
-  document.getElementById("m-cor").value = cor;
-  document.querySelectorAll("#cores button").forEach(b => b.setAttribute("aria-pressed", b.dataset.cor === cor));
-}
-document.getElementById("m-nome").addEventListener("input", aplicarMarca);
-document.getElementById("m-zap").addEventListener("input", aplicarMarca);
-document.querySelectorAll("#cores button").forEach(b => b.addEventListener("click", () => aplicarCor(b.dataset.cor)));
-document.getElementById("m-cor").addEventListener("input", e => aplicarCor(e.target.value));
-
-/* ---------- abas ---------- */
-const abas = [...document.querySelectorAll('[role=tab]')];
-function abrirAba(aba, focar) {
-  abas.forEach(a => {
-    const ativa = a === aba;
-    a.setAttribute("aria-selected", ativa); a.tabIndex = ativa ? 0 : -1;
-    document.getElementById(a.getAttribute("aria-controls")).hidden = !ativa;
-  });
-  if (focar) aba.focus();
-}
-abas.forEach((a, i) => {
-  a.addEventListener("click", () => abrirAba(a));
-  a.addEventListener("keydown", e => {
-    if (e.key === "ArrowRight") abrirAba(abas[(i + 1) % abas.length], true);
-    if (e.key === "ArrowLeft") abrirAba(abas[(i - 1 + abas.length) % abas.length], true);
-  });
-});
-
-/* ---------- calculadora ---------- */
-function calcular() {
-  const sites = +document.getElementById("c-sites").value, conv = +document.getElementById("c-conv").value, ticket = +document.getElementById("c-ticket").value;
-  document.getElementById("o-sites").textContent = sites;
-  document.getElementById("o-conv").textContent = conv + "%";
-  document.getElementById("o-ticket").textContent = brl(ticket);
-  const vendas = sites * conv / 100, total = vendas * ticket;
-  const plano = sites <= 20 ? ["Inicial", 297] : sites <= 60 ? ["Agência", 497] : ["Carteira", 997];
-  document.getElementById("r-total").textContent = brl(total);
-  document.getElementById("r-vendas").textContent = vendas.toLocaleString("pt-BR", { maximumFractionDigits: 1 });
-  document.getElementById("r-plano").textContent = `${plano[0]} · ${brl(plano[1])}`;
-  document.getElementById("r-vezes").textContent = (total / plano[1]).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) + " vezes";
-}
-["c-sites", "c-conv", "c-ticket"].forEach(id => document.getElementById(id).addEventListener("input", calcular));
-calcular();
-
-/* ---------- verificações ---------- */
-const CATEGORIAS = {
-  "Nota do Google": [["Velocidade no celular", "Quanto tempo o conteúdo principal leva para aparecer num celular em 4G."], ["Acessibilidade", "Se pessoas com deficiência e idosos conseguem usar o site."], ["Boas práticas", "Erros técnicos e de segurança medidos pelo Google."], ["SEO técnico", "Se o Google consegue ler e indexar a página."]],
-  "Segurança": [["Cadeado (HTTPS)", "Se o navegador mostra o site como seguro."], ["HTTPS obrigatório", "Se o navegador é obrigado a usar sempre a versão segura."], ["Proteção contra iframe", "Se outro site consegue exibir o seu dentro dele."], ["Tipo de arquivo", "Uma proteção simples que falta em muitos servidores."]],
-  "LGPD": [["Aviso de cookies", "Se existe banner de consentimento quando há rastreadores."], ["Rastreio antes do consentimento", "Se o pixel de anúncio liga antes de o visitante aceitar."], ["Política de privacidade", "Se a página inicial leva até ela."]],
-  "Google e SEO": [["Título da página", "O texto azul que aparece no Google, no tamanho certo."], ["Descrição", "O texto cinza embaixo do título no Google."], ["Título principal (H1)", "Um título principal por página."], ["Idioma", "Se a página declara o idioma."], ["Imagens com descrição", "Textos alternativos para o Google e leitores de tela."], ["Adaptado ao celular", "Se o layout foi feito para telas pequenas."]],
-  "WhatsApp e contato": [["Prévia ao compartilhar", "Imagem e título quando o link é enviado no WhatsApp."], ["Ícone da aba", "O favicon do site."], ["Botão de WhatsApp", "Se o visitante chama a empresa com um clique."], ["Telefone clicável", "Se o telefone liga com um toque no celular."], ["Instagram", "Se a página leva às redes da empresa."]],
-  "Erros e peso": [["Quantidade de arquivos", "Páginas com arquivos demais ficam lentas no 4G."], ["Links quebrados", "Arquivos que não carregam (erro 404 ou 500)."], ["Erros de programação", "Erros que aparecem no console do navegador."]]
-};
-const caixaCat = document.getElementById("categorias"), caixaLista = document.getElementById("lista-checks");
-function mostrarCategoria(nome) {
-  caixaCat.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.cat === nome));
-  caixaLista.innerHTML = "";
-  for (const [t, d] of CATEGORIAS[nome]) {
-    const div = document.createElement("div"); div.innerHTML = "<b></b><span></span>";
-    div.children[0].textContent = t; div.children[1].textContent = d; caixaLista.append(div);
-  }
-}
-for (const [nome, itens] of Object.entries(CATEGORIAS)) {
-  const b = document.createElement("button"); b.type = "button"; b.dataset.cat = nome; b.textContent = `${nome} · ${itens.length}`;
-  b.addEventListener("click", () => mostrarCategoria(nome)); caixaCat.append(b);
-}
-mostrarCategoria("Nota do Google");
-
-/* ---------- pedido de teste ---------- */
-document.getElementById("pedido").addEventListener("submit", async ev => {
-  ev.preventDefault();
-  const texto = `Olá! Quero testar os laudos da Sites em Dia.\nAgência: ${document.getElementById("p-agencia").value}\nSites:\n${document.getElementById("p-sites").value}`;
-  const status = document.getElementById("p-status"), abrir = document.getElementById("p-abrir");
-  abrir.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
-  abrir.hidden = false;
-  try { await navigator.clipboard.writeText(texto); status.textContent = "Pedido copiado. Abra o WhatsApp e envie."; }
-  catch { status.textContent = "Clique em Abrir o WhatsApp: a mensagem já vai escrita."; }
-});
-</script>
 </body>
 </html>

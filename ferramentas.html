@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ferramentas grátis para sites · Sites em Dia</title>
+<meta name="description" content="Ferramentas grátis: nota do Google de qualquer site, onde o site está hospedado (IP, provedor, DNS) e se os seus e-mails caem no spam (SPF, DMARC).">
+<meta property="og:title" content="Ferramentas grátis para sites · Sites em Dia">
+<meta property="og:description" content="Ferramentas grátis: nota do Google de qualquer site, onde o site está hospedado (IP, provedor, DNS) e se os seus e-mails caem no spam (SPF, DMARC).">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#07090f">
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/estilo.css">
+<script src="config.js" defer></script>
+<script src="assets/comum.js" defer></script>
+<script src="assets/ferramentas.js" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<nav class="topo gutter" aria-label="Principal">
+  <div class="miolo">
+    <a class="logo" href="index.html"><span class="selo-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"
+stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Sites <span>em Dia</span></a>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="links" id="menu-links"><a href="index.html">Início</a><a href="ferramentas.html" aria-current="page">Ferramentas grátis</a><a href="precos.html">Preços</a><a href="ajuda.html">Ajuda</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a class="botao" href="precos.html#planos">Assinar</a></div>
+  </div>
+</nav>
+<main id="conteudo">
+<header class="gutter grade-fundo">
+  <div class="miolo" style="padding-block:72px 40px">
+    <div class="cabeca" style="margin-bottom:0">
+      <span class="pilula" style="justify-self:start"><i></i>Grátis e sem cadastro</span>
+      <h1>Ferramentas grátis para entender qualquer site.</h1>
+      <p class="lead">Diagnósticos rápidos com dados públicos e reais. Quando quiser o laudo completo, com a marca da sua agência, é só pedir.</p>
+    </div>
+  </div>
+</header>
+
+<section class="gutter compacta" id="nota">
+  <div class="miolo grade-2" style="align-items:start">
+    <div style="display:grid;gap:14px">
+      <span class="etiqueta">Grátis</span>
+      <h2 style="font-size:2rem">Nota do Google</h2>
+      <p class="suave">Velocidade, acessibilidade, boas práticas e SEO medidos pelo Google PageSpeed Insights, simulando um celular em 4G. Mostra também os pontos que mais derrubam a nota.</p>
+      <form class="campo-teste" data-teste="#res-nota"><input aria-label="Endereço do site" placeholder="sitedocliente.com.br" autocomplete="off" spellcheck="false" inputmode="url"><button class="botao" type="submit">Testar</button></form>
+      <p class="status" data-status role="status"></p>
+    </div>
+    <div class="painel borda-gradiente" id="res-nota" aria-live="polite" hidden></div>
+  </div>
+</section>
+
+<section class="gutter compacta faixa-2" id="hospedagem">
+  <div class="miolo grade-2" style="align-items:start">
+    <div style="display:grid;gap:14px">
+      <span class="etiqueta">Grátis</span>
+      <h2 style="font-size:2rem">Onde o site está hospedado</h2>
+      <p class="suave">Descubra o IP, o provedor, o país e os servidores de DNS de qualquer domínio. Útil para saber com quem falar quando o site cai ou fica lento.</p>
+      <form class="campo-teste" id="f-hospedagem"><input aria-label="Domínio" placeholder="sitedocliente.com.br" autocomplete="off" spellcheck="false" inputmode="url"><button class="botao" type="submit">Consultar</button></form>
+      <p class="status" id="s-hospedagem" role="status"></p>
+    </div>
+    <div class="painel" id="res-hospedagem" aria-live="polite" hidden></div>
+  </div>
+</section>
+
+<section class="gutter compacta" id="email">
+  <div class="miolo grade-2" style="align-items:start">
+    <div style="display:grid;gap:14px">
+      <span class="etiqueta">Grátis</span>
+      <h2 style="font-size:2rem">Seus e-mails caem no spam?</h2>
+      <p class="suave">Confere os três registros que dizem ao Gmail e ao Outlook que os e-mails do seu domínio são legítimos: MX, SPF e DMARC. Sem eles, orçamentos e notas fiscais vão parar no spam.</p>
+      <form class="campo-teste" id="f-email"><input aria-label="Domínio do e-mail" placeholder="empresa.com.br" autocomplete="off" spellcheck="false" inputmode="url"><button class="botao" type="submit">Verificar</button></form>
+      <p class="status" id="s-email" role="status"></p>
+    </div>
+    <div class="painel" id="res-email" aria-live="polite" hidden></div>
+  </div>
+</section>
+
+<section class="gutter faixa-2">
+  <div class="miolo">
+    <div class="cabeca"><p class="rotulo">Para assinantes</p><h2>Diagnósticos mais profundos.</h2>
+      <p class="lead">Incluídos no laudo completo ou em desenvolvimento para os planos pagos.</p></div>
+    <div class="grade-3">
+      <div class="painel cartao"><span class="etiqueta pro">No laudo completo</span><h3>LGPD e cookies</h3><p class="suave">Quais rastreadores o site usa, se existe aviso de cookies e se o rastreio liga antes do aceite.</p></div>
+      <div class="painel cartao"><span class="etiqueta pro">No laudo completo</span><h3>Cabeçalhos de segurança</h3><p class="suave">HSTS, proteção contra iframe e tipo de arquivo, com explicação de como corrigir.</p></div>
+      <div class="painel cartao"><span class="etiqueta pro">No laudo completo</span><h3>Contato e conversão</h3><p class="suave">Botão de WhatsApp, telefone clicável, prévia no WhatsApp e links das redes.</p></div>
+      <div class="painel cartao"><span class="etiqueta breve">Em breve</span><h3>Validade do certificado SSL</h3><p class="suave">Aviso antes de o cadeado vencer e o site aparecer como "Não seguro".</p></div>
+      <div class="painel cartao"><span class="etiqueta breve">Em breve</span><h3>Monitor de site fora do ar</h3><p class="suave">Alerta no WhatsApp quando o site do cliente cair.</p></div>
+      <div class="painel cartao"><span class="etiqueta breve">Em breve</span><h3>Tecnologias do site</h3><p class="suave">WordPress, tema, plugins e ferramentas de marketing instaladas.</p></div>
+    </div>
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px"><a class="botao" href="precos.html">Ver os planos</a><a class="botao contorno" href="ajuda.html">Como ler os resultados</a></div>
+  </div>
+</section>
+
+</main>
+<footer class="rodape gutter">
+  <div class="miolo">
+    <div class="rodape-grade">
+      <div class="rodape-marca">
+        <a class="logo" href="index.html"><span class="selo-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"
+stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Sites <span>em Dia</span></a>
+        <p>Laudos de sites com a marca da sua agência. Velocidade, segurança, LGPD e SEO, explicados para o dono do negócio.</p>
+        <div class="selos" aria-label="Selos de confiança">
+          <span class="selo-confianca" title="Este site usa conexão criptografada">🔒 Conexão segura HTTPS</span>
+          <span class="selo-confianca" title="Não usamos Google Analytics, pixels de anúncio nem cookies de rastreio">🛡️ Sem cookies de rastreio</span>
+          <a class="selo-confianca" id="selo-safe" target="_blank" rel="noopener" href="https://transparencyreport.google.com/safe-browsing/search">✓ Consultar no Google Safe Browsing</a>
+        </div>
+      </div>
+      <div><h4>Produto</h4><a href="ferramentas.html">Ferramentas grátis</a><a href="precos.html">Preços</a><a href="index.html#entregas">O que você recebe</a></div>
+      <div><h4>Empresa</h4><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a href="ajuda.html">Ajuda e documentação</a></div>
+      <div><h4>Legal</h4><a href="termos.html">Termos de uso</a><a href="privacidade.html">Política de privacidade</a></div>
+    </div>
+    <div class="rodape-base">
+      <span>© 2026 Sites em Dia. Todos os direitos reservados.</span>
+      <span class="contato-rodape" data-contato></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

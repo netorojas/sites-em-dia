@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ajuda e documentação · Sites em Dia</title>
+<meta name="description" content="Como ler o laudo, o que significa cada nota do Google, como vender a correção e perguntas frequentes sobre a Sites em Dia.">
+<meta property="og:title" content="Ajuda e documentação · Sites em Dia">
+<meta property="og:description" content="Como ler o laudo, o que significa cada nota do Google, como vender a correção e perguntas frequentes sobre a Sites em Dia.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#07090f">
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/estilo.css">
+<script src="config.js" defer></script>
+<script src="assets/comum.js" defer></script>
+
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<nav class="topo gutter" aria-label="Principal">
+  <div class="miolo">
+    <a class="logo" href="index.html"><span class="selo-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"
+stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Sites <span>em Dia</span></a>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="links" id="menu-links"><a href="index.html">Início</a><a href="ferramentas.html">Ferramentas grátis</a><a href="precos.html">Preços</a><a href="ajuda.html" aria-current="page">Ajuda</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a class="botao" href="precos.html#planos">Assinar</a></div>
+  </div>
+</nav>
+<main id="conteudo">
+<header class="gutter grade-fundo">
+  <div class="miolo" style="padding-block:72px 32px">
+    <div class="cabeca" style="margin-bottom:0">
+      <p class="rotulo">Ajuda e documentação</p>
+      <h1>Tudo para ler, explicar e vender o laudo.</h1>
+    </div>
+  </div>
+</header>
+<section class="gutter compacta">
+  <div class="miolo texto-longo">
+    <h2>Como ler o laudo</h2>
+    <h3>Nota geral (0 a 100)</h3>
+    <p>Resume as 25 verificações. Os pontos mais graves (velocidade, cadeado, LGPD e celular) pesam mais. Use a nota para comparar o antes e o depois de uma correção.</p>
+    <h3>Notas do Google</h3>
+    <p>Vêm do Google Lighthouse, o mesmo motor do PageSpeed Insights, simulando um celular em 4G. As faixas são as do próprio Google:</p>
+    <ul><li><b style="color:var(--bom)">90 a 100</b>: bom</li><li><b style="color:var(--medio)">50 a 89</b>: precisa melhorar</li><li><b style="color:var(--ruim)">0 a 49</b>: ruim</li></ul>
+    <p>A nota de velocidade varia alguns pontos a cada medição, porque depende da rede e do servidor naquele momento. Para comparar antes e depois, meça nas mesmas condições.</p>
+    <h3>Os símbolos do checklist</h3>
+    <ul><li>✅ está certo</li><li>⚠️ pode melhorar: vale oferecer ao cliente</li><li>❌ precisa de atenção: é por onde a conversa começa</li></ul>
+
+    <h2>O que cada verificação significa</h2>
+    <details><summary>Velocidade no celular</summary><p>Mede quanto tempo o conteúdo principal leva para aparecer. Acima de 2,5 segundos, muita gente desiste antes de ver a página. Correções comuns: comprimir imagens, ativar cache e remover scripts desnecessários.</p></details>
+    <details><summary>Aviso de cookies e rastreio antes do consentimento</summary><p>Ferramentas como Google Analytics, Google Ads e o pixel do Facebook gravam cookies no navegador. Pela LGPD, o ideal é pedir consentimento antes. O laudo mostra se existe aviso e se esses cookies são gravados antes de o visitante aceitar. É um indício técnico, não um parecer jurídico.</p></details>
+    <details><summary>Cadeado (HTTPS) e HSTS</summary><p>Sem HTTPS, o navegador mostra "Não seguro" e o Google rebaixa o site. O HSTS obriga o navegador a usar sempre a versão segura.</p></details>
+    <details><summary>Título, descrição e H1</summary><p>O título e a descrição são o que aparece no resultado do Google. O H1 é o título principal da página. Ajustes simples que melhoram o clique e o posicionamento.</p></details>
+    <details><summary>Botão de WhatsApp, telefone clicável e prévia</summary><p>Para pequenas empresas, o WhatsApp é o canal que mais vende. O laudo confere se o visitante consegue chamar com um clique e se o link compartilhado mostra imagem e título.</p></details>
+
+    <h2>Como vender a correção</h2>
+    <ul>
+      <li>Mande o laudo antes da proposta e pergunte qual ponto mais preocupa o cliente.</li>
+      <li>Comece pelos ❌: são os mais fáceis de explicar e os mais urgentes.</li>
+      <li>Depois da correção, rode o laudo de novo e mostre a nota subindo.</li>
+      <li>Ofereça o acompanhamento mensal: a nota pode cair quando o site recebe plugins ou conteúdo novo.</li>
+    </ul>
+
+    <h2>Perguntas frequentes</h2>
+    <details><summary>O cliente da minha agência vai saber que o laudo é de vocês?</summary><p>Não. O PDF sai com o seu logo, a sua cor e os seus contatos.</p></details>
+    <details><summary>Preciso de senha ou acesso ao painel do site?</summary><p>Não. O laudo analisa a página inicial como um visitante comum a vê.</p></details>
+    <details><summary>Vocês fazem as correções?</summary><p>Não: a correção é um serviço da sua agência. O laudo e a proposta existem para você vender esse serviço.</p></details>
+    <details><summary>Quanto tempo leva um laudo?</summary><p>A análise de cada site leva de 1 a 2 minutos. A entrega dos arquivos segue o prazo do seu plano.</p></details>
+    <details><summary>Não achei a resposta.</summary><p><a href="contato.html">Fale com a gente</a> pelo WhatsApp.</p></details>
+  </div>
+</section>
+
+</main>
+<footer class="rodape gutter">
+  <div class="miolo">
+    <div class="rodape-grade">
+      <div class="rodape-marca">
+        <a class="logo" href="index.html"><span class="selo-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"
+stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Sites <span>em Dia</span></a>
+        <p>Laudos de sites com a marca da sua agência. Velocidade, segurança, LGPD e SEO, explicados para o dono do negócio.</p>
+        <div class="selos" aria-label="Selos de confiança">
+          <span class="selo-confianca" title="Este site usa conexão criptografada">🔒 Conexão segura HTTPS</span>
+          <span class="selo-confianca" title="Não usamos Google Analytics, pixels de anúncio nem cookies de rastreio">🛡️ Sem cookies de rastreio</span>
+          <a class="selo-confianca" id="selo-safe" target="_blank" rel="noopener" href="https://transparencyreport.google.com/safe-browsing/search">✓ Consultar no Google Safe Browsing</a>
+        </div>
+      </div>
+      <div><h4>Produto</h4><a href="ferramentas.html">Ferramentas grátis</a><a href="precos.html">Preços</a><a href="index.html#entregas">O que você recebe</a></div>
+      <div><h4>Empresa</h4><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a href="ajuda.html">Ajuda e documentação</a></div>
+      <div><h4>Legal</h4><a href="termos.html">Termos de uso</a><a href="privacidade.html">Política de privacidade</a></div>
+    </div>
+    <div class="rodape-base">
+      <span>© 2026 Sites em Dia. Todos os direitos reservados.</span>
+      <span class="contato-rodape" data-contato></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
